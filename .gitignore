@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+src/components/animationControl.tsx
+src/components/basicsOfMotion.tsx
+src/components/Gestures.tsx
+src/components/scrollAnimation.tsx

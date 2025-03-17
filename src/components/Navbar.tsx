@@ -21,40 +21,33 @@ interface SlideTabContent {
 }
 
 const Navbar = () => {
-  const content = ["Home", "Skills", "Projects", "Contact"];
+  const content = ["Home", "About", "Skills", "Projects", "Contact"];
   return (
-    <div className="px-2 flex flex-row gap-10 sticky top-0 mt-10 justify-around items-center pb-4 border-b-1">
-      <div className="flex flex-row items-center">
-        <div className="w-10 h-10">logo</div>
-        <div className="w-fit h-10 bg-amber-200 text-2xl text-nowrap">
-          Dheeraj Krishna
+    <div className=" max-w-screen-xl mx-auto border rounded-full border-gray-800">
+      <div className=" flex flex-row sticky top-0  items-center ">
+        <div className="flex flex-row items-center">
+          <div className="text-white">logo</div>
         </div>
-      </div>
-      <div className="hidden md:block">
-        <SlideTabs content={content} />
-      </div>
-      <div className="flex  flex-row gap-5">
-        <button className="rounded-lg cursor-pointer bg-gray-600 px-5 py-2 text-white">
-          Resume
-        </button>
-        <button className="flex sm:flex md:hidden border-2 cursor-pointer rounded-lg w-10 justify-center items-center">
-          <IoMdMenu />
-        </button>
+        <div className=" hidden lg:block ml-auto">
+          <SlideTabs content={content} />
+        </div>
+        <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
+          <button className="flex sm:flex lg:hidden border-2 cursor-pointer rounded-lg w-8 sm:w-10 justify-center items-center">
+            <IoMdMenu />
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
 const SlideTabs = ({ content }: SlideTabContent) => {
-  const [position, setPosition] = useState({} as position);
+  const [position, setPosition] = useState({
+    left: 1000,
+    width: 0,
+    opacity: 0,
+  });
 
-  useEffect(() => {
-    setPosition({
-      left: 10,
-      width: 50,
-      opacity: 1,
-    });
-  }, []);
   return (
     <ul
       onMouseLeave={() => {
@@ -62,8 +55,12 @@ const SlideTabs = ({ content }: SlideTabContent) => {
       }}
       className="flex w-fit rounded-3xl border-2 border-black bg-white p-1"
     >
-      {content.map((cont) => {
-        return <Tab setPos={setPosition}>{cont}</Tab>;
+      {content.map((cont, index) => {
+        return (
+          <Tab key={index} setPos={setPosition}>
+            {cont}
+          </Tab>
+        );
       })}
 
       <Cursor position={position} />
