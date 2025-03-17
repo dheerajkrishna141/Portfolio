@@ -1,6 +1,7 @@
 import React, { PropsWithChildren, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { IoMdMenu } from "react-icons/io";
+import Navmenu from "./Navmenu";
 
 interface position {
   left: number;
@@ -19,23 +20,19 @@ interface TabProps extends PropsWithChildren {
 interface SlideTabContent {
   content: string[];
 }
+export const content = ["Home", "About", "Skills", "Projects", "Contact"];
 
 const Navbar = () => {
-  const content = ["Home", "About", "Skills", "Projects", "Contact"];
   return (
-    <div className=" max-w-screen-xl mx-auto border rounded-full border-gray-800">
-      <div className=" flex flex-row sticky top-0  items-center ">
+    <div className=" max-w-screen-2xl mx-auto border rounded-full border-gray-800 mt-3 p-5 sticky top-0 backdrop-blur-xl z-100">
+      <div className=" flex flex-row items-center ">
         <div className="flex flex-row items-center">
           <div className="text-white">logo</div>
         </div>
         <div className=" hidden lg:block ml-auto">
           <SlideTabs content={content} />
         </div>
-        <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
-          <button className="flex sm:flex lg:hidden border-2 cursor-pointer rounded-lg w-8 sm:w-10 justify-center items-center">
-            <IoMdMenu />
-          </button>
-        </div>
+        <Navmenu />
       </div>
     </div>
   );

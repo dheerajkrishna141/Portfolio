@@ -24,7 +24,7 @@ const TypeWriter = ({ textList }: typeProps) => {
 
   return (
     <>
-      <p className="text-gray-300">
+      <p className="text-gray-300 text-2xl">
         a{" "}
         {textList[textIndex].split("").map((l, i) => {
           return (
@@ -41,7 +41,7 @@ const TypeWriter = ({ textList }: typeProps) => {
                   duration: MAIN_FADE_DURATION,
                   ease: "easeInOut",
                 }}
-                className="relative"
+                className="relative text-3xl font-bold text-indigo-500"
               >
                 <motion.span
                   initial={{
@@ -70,7 +70,7 @@ const TypeWriter = ({ textList }: typeProps) => {
                     duration: BOX_FADE_DURATION,
                     ease: "easeInOut",
                   }}
-                  className="absolute bottom-[1px] left-[1px] right-0 top-[3px] bg-neutral-50"
+                  className="absolute bottom-[1px] left-[8px] right-0 top-[3px] bg-indigo-400"
                 />
               </motion.span>
             </AnimatePresence>

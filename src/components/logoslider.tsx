@@ -14,12 +14,12 @@ const logoslider = () => {
     "react.svg",
   ];
   return (
-    <div className="max-w-screen-xl mt-10 overflow-hidden mx-auto backdrop-blur-2xl p-5 rounded-full border-2 border-gray-800">
+    <div className="mt-10 overflow-hidden backdrop-blur-2xl p-5 rounded-full border-2 border-gray-800">
       <div className="flex">
         <motion.div
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
-          transition={{ duration: 5, ease: "linear", repeat: Infinity }}
+          transition={{ duration: 30, ease: "linear", repeat: Infinity }}
           className="flex flex-shrink-0 flex-row gap-5 "
         >
           {logos.map((logo, index) => (
@@ -34,7 +34,7 @@ const logoslider = () => {
         <motion.div
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
-          transition={{ duration: 5, ease: "linear", repeat: Infinity }}
+          transition={{ duration: 30, ease: "linear", repeat: Infinity }}
           className="flex flex-shrink-0 flex-row gap-5 "
         >
           {logos.map((logo, index) => (
@@ -49,8 +49,8 @@ const logoslider = () => {
         <motion.div
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
-          transition={{ duration: 5, ease: "linear", repeat: Infinity }}
-          className="flex flex-shrink-0 flex-row gap-5 "
+          transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+          className="flex flex-shrink-0 flex-row gap-5"
         >
           {logos.map((logo, index) => (
             <img
