@@ -36,8 +36,8 @@ const Skills = () => {
     },
   ];
   return (
-    <div className="mt-10 max-w-screen-2xl mx-auto pt-10">
-      <div className="flex justify-center items-center">
+    <div id="Skills" className=" max-w-screen-2xl mx-auto pt-10 pb-10">
+      <div className="flex justify-center items-center text-center">
         <h1
           className=" text-5xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text"
           style={{ textShadow: "5px 10px 60px #e5e5e5" }}

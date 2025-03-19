@@ -8,7 +8,7 @@ const Home = () => {
     "Tech Enthusiast.",
   ];
   return (
-    <div className="">
+    <div id="Home">
       <div className="flex flex-col gap-5 mt-10">
         <h2 className="text-gray-300">Hello I'm</h2>
         <div className="flex flex-col md:flex-row gap-5 items-center">

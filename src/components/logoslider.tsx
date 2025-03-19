@@ -14,7 +14,7 @@ const logoslider = () => {
     "react.svg",
   ];
   return (
-    <div className="mt-10 overflow-hidden backdrop-blur-2xl p-5 rounded-full border-2 border-gray-800">
+    <div className="mt-10 max-w-screen-2xl mx-auto overflow-hidden backdrop-blur-2xl p-5 w-full border-2  border-gray-800 logoGradient">
       <div className="flex">
         <motion.div
           initial={{ x: 0 }}

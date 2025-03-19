@@ -15,7 +15,7 @@ const About = () => {
   ];
   const about_words = about.split(" ");
   return (
-    <div className="mt-10">
+    <div id="About" className="mt-10">
       <motion.div
         initial={{ y: 10 }}
         whileInView={{ y: 0 }}

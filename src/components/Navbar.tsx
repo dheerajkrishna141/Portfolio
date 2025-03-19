@@ -68,17 +68,23 @@ const SlideTabs = ({ content }: SlideTabContent) => {
 const Tab = ({ setPos, children }: TabProps) => {
   const ref = useRef<HTMLLIElement>(null);
   return (
-    <li
-      ref={ref}
-      onMouseEnter={() => {
-        if (!ref.current) return;
-        const data = ref.current.getBoundingClientRect();
-        setPos({ left: ref.current.offsetLeft, width: data.width, opacity: 1 });
-      }}
-      className="relative z-10 cursor-pointer px-4 py-2 text-sm uppercase text-white mix-blend-difference md:px-5  md:text-base"
-    >
-      {children}
-    </li>
+    <a href={`#${children}`}>
+      <li
+        ref={ref}
+        onMouseEnter={() => {
+          if (!ref.current) return;
+          const data = ref.current.getBoundingClientRect();
+          setPos({
+            left: ref.current.offsetLeft,
+            width: data.width,
+            opacity: 1,
+          });
+        }}
+        className="relative z-10 cursor-pointer px-4 py-2 text-sm uppercase text-white mix-blend-difference md:px-5  md:text-base"
+      >
+        {children}
+      </li>
+    </a>
   );
 };
 
@@ -90,7 +96,8 @@ const Cursor = ({ position }: Props) => {
         width: position.width,
         opacity: position.opacity,
       }}
-      className="absolute z-0 h-9 w-10 rounded-3xl bg-blue-300 md:h-10 "
+      className="absolute z-0 h-9 w-10 rounded-3xl md:h-10 "
+      style={{ backgroundColor: "#5720e8" }}
     ></motion.li>
   );
 };
