@@ -11,7 +11,7 @@ const TypeWriter = ({ textList }: typeProps) => {
   const FADE_DELAY = 5;
   const MAIN_FADE_DURATION = 0.25;
 
-  const SWAP_DELAY_IN_MS = 1000;
+  const SWAP_DELAY_IN_MS = 3500;
   const [textIndex, setTextIndex] = useState(0);
   useEffect(() => {
     const intervalId = setInterval(() => {

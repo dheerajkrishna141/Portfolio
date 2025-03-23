@@ -1,6 +1,5 @@
 import TypeWriter from "./TypeWriter";
-import ScrollAnimation from "./scrollAnimation";
-
+import { motion } from "framer-motion";
 const Home = () => {
   const textList = [
     "Full Stack Web Developer.",
@@ -8,13 +7,32 @@ const Home = () => {
     "Tech Enthusiast.",
   ];
   return (
-    <div id="Home">
+    <div id="Home" className="px-10  scroll-mt-100">
       <div className="flex flex-col gap-5 mt-10">
-        <h2 className="text-gray-300">Hello I'm</h2>
+        <div className="flex  items-center gap-5">
+          <h2 className="text-gray-300 font-bold text-4xl pt-4">Hello</h2>
+          <span className="rotate-15">
+            <motion.img
+              className="h-25 origin-bottom"
+              style={{ filter: "drop-shadow(1px 1px 10px lightblue)" }}
+              src="src/assets/robotic-hand.png"
+              animate={{
+                rotate: [-15, 15, -15, 0, -15, 15, -15, 0],
+              }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+              }}
+            />
+          </span>
+        </div>
         <div className="flex flex-col md:flex-row gap-5 items-center">
-          <h1 className="w-fit text-7xl font-extrabold bg-gradient-to-r from-indigo-600 via-blue-600 to-green-500 text-transparent bg-clip-text">
-            Dheeraj Krishna
-          </h1>
+          <div className="flex flex-col lg:flex-row items-baseline  gap-2">
+            <h2 className="text-gray-300 font-bold text-5xl">I'm</h2>
+            <h1 className="w-fit  p-3 text-7xl font-extrabold bg-gradient-to-r from-purple-500  to-blue-500 text-transparent bg-clip-text">
+              Dheeraj Krishna
+            </h1>
+          </div>
 
           <img
             className="mx-auto h-65"
@@ -23,10 +41,12 @@ const Home = () => {
           />
         </div>
       </div>
-      <TypeWriter textList={textList} />
-      <p className="text-gray-300">
-        I specialize in building high-performance web applications
-      </p>
+      <div className="flex flex-col gap-2">
+        <TypeWriter textList={textList} />
+        <p className="text-gray-300 text-lg">
+          I specialize in building high-performance web applications
+        </p>
+      </div>
     </div>
   );
 };

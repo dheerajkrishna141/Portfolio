@@ -1,11 +1,4 @@
-import React, { useRef } from "react";
-import {
-  motion,
-  useMotionTemplate,
-  useMotionValue,
-  useTime,
-  useTransform,
-} from "framer-motion";
+import { motion, useTime, useTransform } from "framer-motion";
 
 interface CardProps {
   imageSrc: string;
@@ -26,8 +19,9 @@ const SkillCard = ({ description, imageSrc, title }: CardProps) => {
       <motion.div
         initial={{ y: 10, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
         whileHover={{ scale: 1.025, transition: { duration: 0.1 } }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         className="relative"
       >
         <div

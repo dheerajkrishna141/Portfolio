@@ -1,5 +1,5 @@
-import { useTime, useTransform, motion } from "framer-motion";
-import React, { PropsWithChildren } from "react";
+import { motion, useTime, useTransform } from "framer-motion";
+import { PropsWithChildren } from "react";
 
 const CardButton = ({ children }: PropsWithChildren) => {
   const time = useTime();
@@ -20,15 +20,17 @@ const CardButton = ({ children }: PropsWithChildren) => {
       whileTap={{ scale: 0.95 }}
       style={{}}
       transition={{ ease: "easeInOut" }}
-      className="relative mt-4 "
+      className="absolute"
     >
-      <button className="relative z-10 bg-gray-900 rounded-lg text-neutral-50 p-1 px-4 cursor-pointer">
-        {children}
-      </button>
-      <motion.div
-        style={{ background: rotatingBg }}
-        className="absolute -inset-[1.3px] rounded-lg"
-      ></motion.div>
+      <div className="relative">
+        <button className="relative z-10 bg-gray-900 rounded-lg text-neutral-50 p-1 px-4 cursor-pointer">
+          {children}
+        </button>
+        <motion.div
+          style={{ background: rotatingBg }}
+          className="absolute -inset-[1.3px] rounded-lg"
+        ></motion.div>
+      </div>
     </motion.div>
   );
 };

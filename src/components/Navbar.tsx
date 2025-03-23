@@ -1,6 +1,5 @@
-import React, { PropsWithChildren, useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
-import { IoMdMenu } from "react-icons/io";
+import React, { PropsWithChildren, useRef, useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import Navmenu from "./Navmenu";
 
 interface position {
@@ -23,18 +22,41 @@ interface SlideTabContent {
 export const content = ["Home", "About", "Skills", "Projects", "Contact"];
 
 const Navbar = () => {
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (previous) {
+      if (latest > previous && latest > 150) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+    }
+  });
+
+  const [hidden, setHidden] = useState(false);
   return (
-    <div className=" max-w-screen-2xl mx-auto border rounded-full border-gray-800 mt-3 p-5 sticky top-0 backdrop-blur-xl z-100">
+    <motion.nav
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" },
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      style={{ backgroundColor: "#111112" }}
+      className=" max-w-screen-2xl mx-auto border rounded-full border-gray-800 mt-3 p-5 sticky top-0 z-100"
+    >
       <div className=" flex flex-row items-center ">
-        <div className="flex flex-row items-center">
-          <div className="text-white">logo</div>
+        <div className="size-17">
+          <img src="src/assets/DK.png" />
         </div>
         <div className=" hidden lg:block ml-auto">
           <SlideTabs content={content} />
         </div>
         <Navmenu />
       </div>
-    </div>
+    </motion.nav>
   );
 };
 
