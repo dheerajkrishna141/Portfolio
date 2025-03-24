@@ -19,7 +19,7 @@ const Home = () => {
             <motion.img
               className="h-25 origin-bottom"
               style={{ filter: "drop-shadow(1px 1px 10px lightblue)" }}
-              src="src/assets/robotic-hand.png"
+              src="assets/robotic-hand.png"
               animate={{
                 rotate: [-15, 15, -15, 0, -15, 15, -15, 0],
               }}
@@ -41,7 +41,7 @@ const Home = () => {
           <img
             className="mx-auto h-65"
             style={{ filter: "drop-shadow(5px 5px 10px lightblue" }}
-            src="/src/assets/coding.svg"
+            src="assets/coding.svg"
           />
         </div>
       </div>

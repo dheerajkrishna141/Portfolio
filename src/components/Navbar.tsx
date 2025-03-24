@@ -49,7 +49,7 @@ const Navbar = () => {
     >
       <div className=" flex flex-row items-center ">
         <div className="size-17">
-          <img src="src/assets/DK.png" />
+          <img src="assets/DK.png" />
         </div>
         <div className=" hidden lg:block ml-auto">
           <SlideTabs content={content} />

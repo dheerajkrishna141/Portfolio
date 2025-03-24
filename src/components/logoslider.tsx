@@ -24,7 +24,7 @@ const logoslider = () => {
           {logos.map((logo, index) => (
             <img
               key={index}
-              src={`/src/assets/${logo}`}
+              src={`assets/${logo}`}
               alt={logo}
               className="w-20 h-20 mr-2 "
             />
@@ -39,7 +39,7 @@ const logoslider = () => {
           {logos.map((logo, index) => (
             <img
               key={index}
-              src={`/src/assets/${logo}`}
+              src={`assets/${logo}`}
               alt={logo}
               className="w-20 h-20 mr-2"
             />
@@ -54,7 +54,7 @@ const logoslider = () => {
           {logos.map((logo, index) => (
             <img
               key={index}
-              src={`/src/assets/${logo}`}
+              src={`assets/${logo}`}
               alt={logo}
               className="w-20 h-20 mr-2"
             />

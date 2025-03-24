@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div id="Contact">
       <div className="flex justify-center mb-10">
-        <video src="src/assets/bgVideo2.mp4" autoPlay loop muted width={"700"}>
+        <video src="assets/bgVideo2.mp4" autoPlay loop muted width={"700"}>
           Your browser does not support the video tag.
         </video>
       </div>

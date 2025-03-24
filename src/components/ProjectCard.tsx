@@ -109,7 +109,7 @@ const ProjectCard = ({
             {icons.map((icon, index) => (
               <img
                 key={index}
-                src={`/src/assets/${icon}`}
+                src={`assets/${icon}`}
                 alt={icon}
                 className="w-6 h-6 md:w-8 md:h-8"
               />

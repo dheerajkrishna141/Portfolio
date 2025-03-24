@@ -10,7 +10,7 @@ const About = () => {
         >
           <img
             className="hidden lg:block w-110 h-150 rounded-4xl border-2 border-gray-500"
-            src="src/assets/dheeraj.jpg"
+            src="assets/dheeraj.jpg"
             alt=""
           />
           <div className="my-auto">

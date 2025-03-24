@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import { MotionValue, useScroll, motion } from "framer-motion";
-import { projects } from "../assets/data/projects";
+import { projects } from "../data/projects";
 export interface animationProps {
   range: number[];
   targetScale: number;
