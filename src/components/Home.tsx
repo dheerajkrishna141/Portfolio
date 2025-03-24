@@ -7,6 +7,7 @@ const Home = () => {
     "Tech Enthusiast.",
     "Java Developer.",
     "API Developer.",
+    "Responsive Design Enthusiast.",
     "Frontend Engineer.",
     "Database Designer.",
   ];

@@ -14,7 +14,7 @@ export const projects = [
     description:
       "URLINK (frontend) is a responsive user interface for URLINK, a URL shortening service that allows users to convert long URLs into short, easy-to-share custom alias links, enabling better organization, tagging, and access to the web.",
     orientation: "right",
-    icons: ["react.svg", "zustand.svg", "Chakra.png", "typescript.svg"],
+    icons: ["react.svg", "zustand.svg", "chakra.png", "typescript.svg"],
     href: "https://github.com/dheerajkrishna141/URLink-frontend",
   },
   {

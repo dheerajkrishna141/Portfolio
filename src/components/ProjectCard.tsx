@@ -87,11 +87,7 @@ const ProjectCard = ({
             muted
             loop
           >
-            <img
-              src={videoSrc}
-              className="rounded-xl lg:w-1/2 mx-auto lg:mt-5 mb-4 "
-              alt={title}
-            />
+            Your browser does not support the video tag.
           </video>
         </motion.div>
         {/* </AnimatePresence> */}
