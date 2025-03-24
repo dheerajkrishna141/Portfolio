@@ -61,26 +61,6 @@ const About = () => {
                 excitement to apply this knowledge in real-world scenarios.
               </p>
             </div>
-            {/* <div>
-              <div className="flex flex-row gap-5 mt-10">
-                {icons.map((icon, index) => (
-                  <a href={icon.href} target="_blank">
-                    <motion.img
-                      initial={{ scale: 1 }}
-                      whileHover={{
-                        scale: 1.1,
-                        cursor: "pointer",
-                      }}
-                      // transition={{ duration: 0.2, ease: "easeInOut" }}
-                      key={index}
-                      src={`/src/assets/${icon.src}`}
-                      alt={icon.src}
-                      className="w-10 h-10 "
-                    />
-                  </a>
-                ))}
-              </div>
-            </div> */}
             <div className="flex flex-row gap-7 sm:gap-5">
               <Button
                 onClick={() =>
@@ -103,7 +83,6 @@ const About = () => {
           style={{
             background:
               "radial-gradient( 100% 100% at 50% 50%, #111112 50%, #5720e8)",
-            // background: " conic-gradient( #111112, #5720e8)",
           }}
         ></div>
       </div>

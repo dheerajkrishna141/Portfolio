@@ -3,9 +3,8 @@ import { motion, useTime, useTransform } from "framer-motion";
 interface CardProps {
   imageSrc: string;
   title: string;
-  description: string;
 }
-const SkillCard = ({ description, imageSrc, title }: CardProps) => {
+const SkillCard = ({ imageSrc, title }: CardProps) => {
   const time = useTime();
 
   const rotate = useTransform(time, [0, 4500], [0, 360], { clamp: false });
@@ -17,25 +16,26 @@ const SkillCard = ({ description, imageSrc, title }: CardProps) => {
   return (
     <>
       <motion.div
-        initial={{ y: 10, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
         viewport={{ once: true }}
-        whileHover={{ scale: 1.025, transition: { duration: 0.1 } }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        whileHover={{
+          scale: 1.025,
+
+          transition: { duration: 0.1 },
+        }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
         className="relative"
       >
         <div
-          className=" shadow-md rounded-lg p-4 py-10 w-80 h-fit flex flex-col items-center text-center z-10 relative"
+          className=" shadow-md rounded-3xl p-3 w-fit h-14 flex flex-row items-center z-10 relative"
           style={{ backgroundColor: "rgba(33,38,49,1)" }}
         >
-          <img src={imageSrc} alt={title} className="w-16 h-16 mb-4" />
-          <h2 className="text-xl font-semibold mb-2 text-neutral-100">
-            {title}
-          </h2>
-          <p className="text-neutral-100">{description}</p>
+          <img src={imageSrc} className="h-10 w-10" alt={title} />
+          <h2 className="text-lg font-medium ml-3 text-neutral-100">{title}</h2>
         </div>
         <motion.div
-          className="absolute -inset-[2px] rounded-lg"
+          className="absolute -inset-[2px] rounded-3xl"
           style={{ background: rotatingBg }}
         ></motion.div>
       </motion.div>
@@ -44,19 +44,3 @@ const SkillCard = ({ description, imageSrc, title }: CardProps) => {
 };
 
 export default SkillCard;
-
-// <div
-//   className="group relative max-w-md rounded-xl border border-white/10 bg-gray-900 px-8 py-16 shadow-2xl"
-//   onMouseMove={handleMouseMove}
-// >
-//   <div>
-//     <h3 className="text-base font-semibold leading-7 text-sky-500">Byline</h3>
-//     <div className="mt-2 flex items-center gap-x-2">
-//       <span className="text-5xl font-bold tracking-tight text-white">Hero</span>
-//     </div>
-//     <p className="mt-6 text-base leading-7 text-gray-300">
-//       Lorem ipsum dolor sit amet consectetur adipisicing elit, facilis illum eum
-//       ullam nostrum atque quam.
-//     </p>
-//   </div>
-// </div>;

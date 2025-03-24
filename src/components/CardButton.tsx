@@ -20,10 +20,10 @@ const CardButton = ({ children }: PropsWithChildren) => {
       whileTap={{ scale: 0.95 }}
       style={{}}
       transition={{ ease: "easeInOut" }}
-      className="absolute"
+      className="absolute "
     >
       <div className="relative">
-        <button className="relative z-10 bg-gray-900 rounded-lg text-neutral-50 p-1 px-4 cursor-pointer">
+        <button className="flex justify-center items-center gap-2 relative z-10 bg-gray-900 rounded-lg text-neutral-50 p-1 px-4 cursor-pointer">
           {children}
         </button>
         <motion.div

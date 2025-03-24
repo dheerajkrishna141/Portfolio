@@ -4,6 +4,7 @@ import { ImEnlarge2, ImShrink2 } from "react-icons/im";
 import CardButton from "./CardButton";
 import ExpandableText from "./ExpandableText";
 import { animationProps } from "./Projects";
+import { FiGithub } from "react-icons/fi";
 
 interface CardProps {
   videoSrc: string;
@@ -115,34 +116,15 @@ const ProjectCard = ({
             ))}
           </div>
           <a href={href} target="_blank" className="ml-3">
-            <CardButton>GitHub</CardButton>
+            <CardButton>
+              <FiGithub />
+              Source Code
+            </CardButton>
           </a>
         </div>
       </div>
     </motion.div>
   );
-  // }
-
-  // else {
-  //   return (
-  //     <>
-  //       <div
-  //         className="sticky top-0 shadow-md rounded-lg p-4 py-10 w-[80%] lg:w-[60%] h-100 flex flex-row justify-center items-center text-center"
-  //         style={{ backgroundColor: "rgba(33,38,49,1)" }}
-  //       >
-  //         <div className="w-[40%] overflow-hidden">
-  //           <img src={imageSrc} alt={title} className=" mb-4 " />
-  //         </div>
-  //         <div className="flex flex-col items-start justify-center mx-auto w-1/2">
-  //           <h2 className="text-xl font-semibold mb-2 text-neutral-100">
-  //             {title}
-  //           </h2>
-  //           <p className="text-neutral-100">{description}</p>
-  //         </div>
-  //       </div>
-  //     </>
-  //   );
-  // }
 };
 
 export default ProjectCard;

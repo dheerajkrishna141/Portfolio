@@ -31,7 +31,6 @@ const Button = ({ children, onClick }: onClickProp) => {
           },
         }}
         className="px-6 py-3  rounded-full relative radial-gradient cursor-pointer "
-        // style={{ boxShadow: "0 0 5px 1px white" }}
       >
         <span className="text-neutral-100 tracking-wide font-medium h-full w-full block relative linear-mask">
           {children}

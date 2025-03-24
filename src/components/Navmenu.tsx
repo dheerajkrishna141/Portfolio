@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 import { content } from "./Navbar";
 import Navbutton from "./Navbutton";
-import { AnimatePresence, motion } from "framer-motion";
 
 const Navmenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,6 +14,7 @@ const Navmenu = () => {
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
+            style={{ backgroundColor: "rgba(33,38,49,1)" }}
             transition={{ duration: 0.5, type: "spring", ease: "easeInOut" }}
             className="absolute -top-2 -right-2 w-64 min-h-64 rounded-md bg-gray-500 mt-10 z-10 p-8 flex flex-col origin-top-right"
           >

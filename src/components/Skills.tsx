@@ -1,38 +1,7 @@
+import { skills } from "../assets/data/skills";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
-  const skills = [
-    {
-      imageSrc: "/src/assets/react.svg",
-      description: "React.ts for Frontend and User-Interface Development.",
-      title: "React.ts",
-    },
-    {
-      imageSrc: "/src/assets/spring.png",
-      description: "Spring Framework for Backend and API Development.",
-      title: "Spring",
-    },
-    {
-      imageSrc: "/src/assets/mysql.png",
-      description: "MySQL for Relational Database Management.",
-      title: "MySQL",
-    },
-    {
-      imageSrc: "/src/assets/mongodb.svg",
-      description: "MongoDB for Non-Relational Database Management.",
-      title: "MongoDB",
-    },
-    {
-      imageSrc: "/src/assets/tailwind.svg",
-      description: "Tailwind CSS for Styling and UI Design.",
-      title: "Tailwind CSS",
-    },
-    {
-      imageSrc: "/src/assets/reactquery.webp",
-      description: "React Query for Data Fetching and State Management.",
-      title: "React Query",
-    },
-  ];
   return (
     <div
       id="Skills"
@@ -47,10 +16,9 @@ const Skills = () => {
           Skills and Technologies
         </h1>
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-10 mt-10">
+      <div className="flex flex-wrap justify-center items-center gap-5 mt-10">
         {skills.map((skill, index) => (
           <SkillCard
-            description={skill.description}
             imageSrc={skill.imageSrc}
             title={skill.title}
             key={index}
