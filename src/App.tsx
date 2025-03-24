@@ -1,7 +1,6 @@
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { ReactLenis } from "lenis/react";
-import "./App.css";
 import About from "./components/About.tsx";
 import Footer from "./components/Footer.tsx";
 import Home from "./components/Home.tsx";
