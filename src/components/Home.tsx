@@ -5,6 +5,10 @@ const Home = () => {
     "Full Stack Web Developer.",
     "Software Engineer.",
     "Tech Enthusiast.",
+    "Java Developer.",
+    "API Developer.",
+    "Frontend Engineer.",
+    "Database Designer.",
   ];
   return (
     <div id="Home" className="px-10  scroll-mt-100">
@@ -43,8 +47,8 @@ const Home = () => {
       </div>
       <div className="flex flex-col gap-2">
         <TypeWriter textList={textList} />
-        <p className="text-gray-300 text-lg">
-          I specialize in building high-performance web applications
+        <p className="text-gray-300 text-md sm:text-lg">
+          I specialize in building high-performance web applications.
         </p>
       </div>
     </div>

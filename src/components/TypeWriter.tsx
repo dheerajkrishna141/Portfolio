@@ -41,7 +41,7 @@ const TypeWriter = ({ textList }: typeProps) => {
                   duration: MAIN_FADE_DURATION,
                   ease: "easeInOut",
                 }}
-                className="relative text-2xl sm:text-3xl font-bold text-indigo-500"
+                className="relative text-2xl sm:text-4xl font-bold text-indigo-500"
               >
                 <motion.span
                   initial={{
