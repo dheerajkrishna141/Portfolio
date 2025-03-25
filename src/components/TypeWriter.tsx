@@ -24,7 +24,7 @@ const TypeWriter = ({ textList }: typeProps) => {
 
   return (
     <>
-      <p className="text-gray-300 text-2xl">
+      <p className="text-gray-300 text-2xl text-nowrap">
         a{" "}
         {textList[textIndex].split("").map((l, i) => {
           return (
@@ -35,7 +35,7 @@ const TypeWriter = ({ textList }: typeProps) => {
                 duration: MAIN_FADE_DURATION,
                 ease: "easeInOut",
               }}
-              className="relative text-2xl sm:text-4xl font-bold text-indigo-500"
+              className="relative text-2xl sm:text-4xl font-bold text-indigo-500 "
             >
               <motion.span
                 initial={{

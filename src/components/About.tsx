@@ -32,34 +32,59 @@ const About = () => {
                 solutions while crafting robust, elegant, and high-performing
                 web applications.
               </p>
-              <p>
-                My enthusiasm for coding and web development was sparked during
-                my first year as a Bachelor’s student, where I was introduced to
-                programming through C. This journey deepened when I discovered
-                my favorite language, Java, and ventured into the world of web
-                development in my second year. These formative experiences laid
-                a strong foundation for my passion and ambition.
-              </p>
-              <p>
-                Fast forward two years of dedicated learning, I landed my first
-                internship with Cognizant as a full-stack developer. During this
-                opportunity, I gained hands-on experience with a variety of
-                front-end and back-end technologies, further solidifying my
-                passion for building elegant, user-friendly, and efficient web
-                solutions. It was at this point that I resolved to excel as a
-                full-stack developer, crafting optimal solutions and creating
-                beautiful, functional digital experiences.
-              </p>
-              <p>
-                To achieve my aspirations, I decided to dive deeper into this
-                field by pursuing a Master's in Computer Science at George Mason
-                University.This journey has not only deepened my understanding
-                of web development but has also allowed me to explore other
-                areas such as software engineering, algorithms, and system
-                design that contribute equally to enhancing my skills. The
-                experience has been incredibly rewarding and has fueled my
-                excitement to apply this knowledge in real-world scenarios.
-              </p>
+              <div className="hidden md:flex flex-col gap-3 ">
+                <p>
+                  My enthusiasm for coding and web development was sparked
+                  during my first year as a Bachelor’s student, where I was
+                  introduced to programming through C. This journey deepened
+                  when I discovered my favorite language, Java, and ventured
+                  into the world of web development in my second year. These
+                  formative experiences laid a strong foundation for my passion
+                  and ambition.
+                </p>
+                <p>
+                  Fast forward two years of dedicated learning, I landed my
+                  first internship with Cognizant as a full-stack developer.
+                  During this opportunity, I gained hands-on experience with a
+                  variety of front-end and back-end technologies, further
+                  solidifying my passion for building elegant, user-friendly,
+                  and efficient web solutions. It was at this point that I
+                  resolved to excel as a full-stack developer, crafting optimal
+                  solutions and creating beautiful, functional digital
+                  experiences.
+                </p>
+                <p>
+                  To achieve my aspirations, I decided to dive deeper into this
+                  field by pursuing a Master's in Computer Science at George
+                  Mason University. This journey has not only deepened my
+                  understanding of web development but has also allowed me to
+                  explore other areas such as software engineering, algorithms,
+                  and system design that contribute equally to enhancing my
+                  skills. The experience has been incredibly rewarding and has
+                  fueled my excitement to apply this knowledge in real-world
+                  scenarios.
+                </p>
+              </div>
+              <div className="flex md:hidden flex-col gap-3">
+                <p>
+                  My journey with programming began during my Bachelor's degree,
+                  where I was first introduced to coding through C and later
+                  discovered web development and my love for Java. An internship
+                  with Cognizant as a full-stack developer provided invaluable
+                  hands-on experience with both front-end and back-end
+                  technologies, solidifying my technical skills and
+                  strengthening my resolve to excel in crafting seamless digital
+                  experiences.
+                </p>
+                <p>
+                  Currently pursuing a Master’s in Computer Science at George
+                  Mason University, I continue to deepen my expertise in web
+                  development, algorithms, software engineering, and system
+                  design. These experiences have enriched my skills and given me
+                  the tools to tackle real-world challenges, preparing me to
+                  create robust and innovative solutions for the future.
+                </p>
+              </div>
             </div>
             <div className="flex flex-row gap-7 sm:gap-5">
               <Button

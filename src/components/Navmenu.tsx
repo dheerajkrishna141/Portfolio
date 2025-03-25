@@ -20,7 +20,7 @@ const Navmenu = () => {
           >
             <ul className="flex flex-col gap-2 flex-1">
               {content.map((cont, index) => (
-                <a href={"#" + cont}>
+                <a href={"#" + cont} onClick={() => setMenuOpen(false)}>
                   <li
                     key={index}
                     className="text-white text-xl font-medium cursor-pointer"
