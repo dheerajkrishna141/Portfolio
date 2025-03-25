@@ -92,10 +92,10 @@ const ProjectCard = ({
         </motion.div>
         {/* </AnimatePresence> */}
         <div className="flex flex-col mb-5 w-fit gap-2">
-          <h2 className="truncate text-base lg:text-2xl font-semibold mt-3  ml-3 text-neutral-100 uppercase">
+          <h2 className="truncate text-lg lg:text-2xl font-semibold mt-3  ml-3 text-neutral-100 uppercase">
             {title}
           </h2>
-          <p className=" text-xs md:text-sm lg:text-base  text-neutral-100 font-light mt-3 px-3 ">
+          <p className=" text-sm  lg:text-base  text-neutral-100 font-light mt-3 px-3 ">
             <ExpandableText>{description}</ExpandableText>
           </p>
           <div

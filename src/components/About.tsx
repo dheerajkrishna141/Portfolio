@@ -9,7 +9,7 @@ const About = () => {
           style={{ backgroundColor: "#111112" }}
         >
           <img
-            className="hidden lg:block w-110 h-150 rounded-4xl border-2 border-gray-500"
+            className="hidden lg:block w-110 h-150 my-auto rounded-4xl border-2 border-gray-500"
             src="assets/dheeraj.jpg"
             alt=""
           />
