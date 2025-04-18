@@ -60,7 +60,10 @@ const Footer = () => {
           <div className="text-xl font-bold">Contact</div>
           <p className="font-light text-gray-400 hover:text-white transition-all duration-300 ease-out w-fit relative group flex items-center gap-2">
             <MdOutlineEmail />
-            <a href="mailto:dnagula@gmu.edu"> dnagula@gmu.edu</a>
+            <a href="mailto:dheerajkrishna141@gmail.com">
+              {" "}
+              dheerajkrishna141@gmail.com
+            </a>
             <span className="absolute -bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 ease-out group-hover:w-full"></span>
           </p>
         </div>
